@@ -9,7 +9,7 @@ function App() {
   const [hello, setHello] = useState('');
 
   useEffect(() => {
-    fetch('https://yepl.azurewebsites.net/api/HelloReact?code=pMFh_LikHDzJBaBFZizjNnF6SpnPHO1d_jruVSIl7v22AzFuh_XQxQ%3D%3D')
+    fetch('https://yepl-api.azurewebsites.net/api/HelloReact?code=tgl6EW6m0PAsUCXJT9lBCMvLDIg9Z8C_Xy0EKgz3Qb66AzFuDZBTaQ%3D%3D')
       .then((res) => res.text())
       .then((data) => setHello(data));
   }, []);
