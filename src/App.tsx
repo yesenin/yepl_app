@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const [hello, setHello] = useState('');
+
+  useEffect(() => {
+    fetch('https://yepl.azurewebsites.net/api/HelloReact?code=pMFh_LikHDzJBaBFZizjNnF6SpnPHO1d_jruVSIl7v22AzFuh_XQxQ%3D%3D')
+      .then((res) => res.json())
+      .then((data) => setHello(data.hello));
+  }, []);
 
   return (
     <>
@@ -25,7 +33,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
         <p>
-          Anton Yesenin is here too. 01.
+          {hello}
         </p>
       </div>
       <p className="read-the-docs">
