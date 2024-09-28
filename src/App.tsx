@@ -25,7 +25,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
         <p>
-          Anton Yesenin is here too.
+          Anton Yesenin is here too. 01.
         </p>
       </div>
       <p className="read-the-docs">
