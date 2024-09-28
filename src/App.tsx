@@ -10,8 +10,8 @@ function App() {
 
   useEffect(() => {
     fetch('https://yepl.azurewebsites.net/api/HelloReact?code=pMFh_LikHDzJBaBFZizjNnF6SpnPHO1d_jruVSIl7v22AzFuh_XQxQ%3D%3D')
-      .then((res) => res.json())
-      .then((data) => setHello(data.hello));
+      .then((res) => res.text())
+      .then((data) => setHello(data));
   }, []);
 
   return (
